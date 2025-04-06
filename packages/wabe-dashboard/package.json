@@ -1,5 +1,5 @@
 {
-  "name": "wabe-dashboard",
+  "name": "nuxt-ui-pro-template-dashboard",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,30 +8,29 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "check": "tsc --project $(pwd)/tsconfig.json",
-    "lint": "biome lint . --no-errors-on-unmatched --config-path=../../",
-    "format": "biome format --write . --config-path=../../",
-    "storybook": "storybook dev --port 6006",
-    "build-storybook": "storybook build"
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@nuxt/icon": "1.11.0",
-    "@nuxt/ui": "3.0.2",
-    "@nuxtjs/apollo": "5.0.0-alpha.14",
-    "@nuxtjs/tailwindcss": "6.13.2",
-    "nuxt": "3.16.2",
-    "vue": "3.5.13",
-    "vue-router": "4.5.0"
+    "@iconify-json/lucide": "^1.2.34",
+    "@iconify-json/simple-icons": "^1.2.30",
+    "@nuxt/ui-pro": "^3.0.2",
+    "@unovis/ts": "^1.5.1",
+    "@unovis/vue": "^1.5.1",
+    "@vueuse/nuxt": "^13.0.0",
+    "date-fns": "^4.1.0",
+    "nuxt": "^3.16.2",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@nuxtjs/storybook": "8.3.3",
-    "storybook": "8.6.12",
-    "@storybook/vue3": "8.6.12",
-    "@storybook-vue/nuxt": "8.3.3",
-    "@storybook/addon-links": "8.6.12",
-    "@storybook/builder-vite": "8.6.12",
-    "@storybook/addon-essentials": "8.6.12",
-    "@storybook/addon-interactions": "8.6.12",
-    "@storybook/blocks": "8.6.12"
-  }
+    "@nuxt/eslint": "^1.3.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "vue-tsc": "^2.2.2"
+  },
+  "resolutions": {
+    "unimport": "4.1.1",
+    "vue-tsc": "2.2.2"
+  },
+  "packageManager": "pnpm@10.7.0"
 }

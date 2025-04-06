@@ -1,26 +1,35 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devServer: {
-    port: 3000,
-  },
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
   modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxt/ui',
-    '@nuxtjs/storybook',
-    '@nuxtjs/apollo',
+    '@nuxt/eslint',
+    '@nuxt/ui-pro',
+    '@vueuse/nuxt'
   ],
-  storybook: {
-    route: '/__storybook__',
-    port: 6006,
+
+  devtools: {
+    enabled: true
   },
-  apollo: {
-    clients: {
-      default: {
-        connectToDevTools: true,
-        httpEndpoint: 'http://127.0.0.1:3001/graphql',
-      },
-    },
+
+  css: ['~/assets/css/main.css'],
+
+  routeRules: {
+    '/api/**': {
+      cors: true
+    }
   },
+
+  future: {
+    compatibilityVersion: 4
+  },
+
+  compatibilityDate: '2024-07-11',
+
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
+  }
 })
